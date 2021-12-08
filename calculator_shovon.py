@@ -8,17 +8,15 @@ def take_float_input(msg):
             a = input('You didn\'t entered an float value.')
 
 
-# Print the complete message with instructions so that user doesn't make mistake
-print('What kind of operation do you want to make? Enter one of the symbols:')
-print('+ for Addition,')
-print('- for Subtraction,')
-print('* for Multiplication and')
-print('/ for Division')
-operation_symbol = input()
+instructions = [
+    'What kind of operation do you want to make? Enter one of the symbols:',
+    '+ for Addition,',
+    '- for Subtraction,',
+    '* for Multiplication and',
+    '/ for Division\n'
+]
 
-# Validate the input
-while operation_symbol != '+' and operation_symbol != '-' and operation_symbol != 'x' and operation_symbol != '/':
-    operation_symbol = input('Please enter a valid symbol: ')
+operation_symbol = input('\n'.join(instructions))
 
 # Take the number inputs and also validate the operation symbol
 while True:
